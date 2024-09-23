@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SQLite.swift",
+    name: "SVSQLite.swift",
     platforms: [
         .iOS(.v11),
         .macOS(.v10_13),
@@ -12,13 +12,13 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "SQLite",
-            targets: ["SQLite"]
+            name: "SVSQLite",
+            targets: ["SVSQLite"]
         )
     ],
     targets: [
         .target(
-            name: "SQLite",
+            name: "SVSQLite",
             exclude: [
                 "Info.plist"
             ]
@@ -26,7 +26,7 @@ let package = Package(
         .testTarget(
             name: "SQLiteTests",
             dependencies: [
-                "SQLite"
+                "SVSQLite"
             ],
             path: "Tests/SQLiteTests",
             exclude: [
